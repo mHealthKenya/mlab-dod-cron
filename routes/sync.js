@@ -2,11 +2,14 @@ const express = require('express');
 const router = express.Router();
 var moment = require("moment");
 var DATE_TODAY = moment(new Date()).format("YYYY-MM-DD");
-var { Result } = require("./models/results.js");
-var { MlabResult } = require("./models_mlab/results");
+var { Result } = require("../models/results.js");
+var { MlabResult } = require("../models_mlab/results");
+const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 const TODAY_START = new Date().setHours(0, 0, 0, 0);
 const NOW = new Date();
+
+const path = require('path');
 require("dotenv").config({ path: path.resolve(__dirname, './.env') 
 });
 

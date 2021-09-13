@@ -107,12 +107,12 @@ const Result = sequelize.sequelize.define(
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: Sequelize.Sequelize.fn('now')
+      defaultValue: DataTypes.Sequelize.fn('now')
     },
     updated_at: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: Sequelize.Sequelize.fn('now')
+      defaultValue: DataTypes.Sequelize.fn('now')
     },
     lab_name: {
       type: DataTypes.STRING(255),
