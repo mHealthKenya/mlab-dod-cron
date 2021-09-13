@@ -1,7 +1,7 @@
-const sequelize = require("../dbconfig");
+const sequelize = require("../dbconfig_mlab");
 const DataTypes = require('sequelize');
 
-const Result = sequelize.sequelize.define(
+const MlabResult = sequelize.sequelize.define(
   'results', {
     id: {
       autoIncrement: true,
@@ -189,6 +189,6 @@ const Result = sequelize.sequelize.define(
   }
 );
 
-module.exports.Result = Result;
+module.exports.MlabResult = MlabResult;
 
 

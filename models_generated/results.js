@@ -1,8 +1,6 @@
-const sequelize = require("../dbconfig");
-const DataTypes = require('sequelize');
-
-const Result = sequelize.sequelize.define(
-  'results', {
+const Sequelize = require('sequelize');
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define('results', {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
@@ -186,9 +184,5 @@ const Result = sequelize.sequelize.define(
         ]
       },
     ]
-  }
-);
-
-module.exports.Result = Result;
-
-
+  });
+};
