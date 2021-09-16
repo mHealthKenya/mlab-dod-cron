@@ -126,7 +126,6 @@ const Result = sequelize.sequelize.define(
   }, {
     sequelize,
     tableName: 'results',
-    schema: 'public',
     timestamps: false,
     indexes: [
       {

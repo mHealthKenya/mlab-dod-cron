@@ -12,7 +12,7 @@ const db_server = process.env.DB_HOST_DOD;
 const sequelize = new Sequelize(database, username, password, {
     host: db_server,
     port: port,
-    dialect: "mysql"
+    dialect: "postgres"
 });
 
 const connect = async () => {
@@ -26,6 +26,8 @@ const connect = async () => {
         });
     
 };
+
+//sequelize.authenticate().then(function(errors) { console.log(errors) });
 
 const db = {
     sequelize: sequelize,

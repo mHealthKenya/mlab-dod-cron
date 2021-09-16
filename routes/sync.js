@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 var moment = require("moment");
+var request = require("request");
 var DATE_TODAY = moment(new Date()).format("YYYY-MM-DD");
 var { Result } = require("../models/results.js");
 var { MlabResult } = require("../models_mlab/results");
@@ -37,6 +38,8 @@ async function syncResults() {
                 }
             }
             }).then(async function (results) {
+
+                console.log(results);
 
                 for(let result of results) {
 
@@ -92,7 +95,7 @@ async function syncResults() {
             
             });
 
-        console.log(results.length);
+        console.log(results);
     } catch (e) {
         console.log(e);
     }

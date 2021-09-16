@@ -21,7 +21,7 @@ const results = require("./routes/sync");
 
 app.use("/sync", results);
 
-const PORT = process.env.DB_PORT || 1440;
+const PORT = process.env.APP_PORT || 1440;
 app.listen(PORT, () =>
     console.log(`Mlab App started. Listening on Port: ${PORT}`)
 );
