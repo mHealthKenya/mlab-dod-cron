@@ -18,12 +18,13 @@ async function syncResults() {
 // Schedule tasks to be run on the server every midnight.
 // denote specific hiv tests and not all tests
 //compare max is in dod server to what exists in the lims
+//add lims_id in dod db
 
     try {
 
         let max_exsisting_result = await MlabResult.findOne({
             attributes: [
-                [Sequelize.fn('MAX', Sequelize.col('id')), 'id']
+                [Sequelize.fn('MAX', Sequelize.col('lab7_id')), 'lab7_id']
             ]
         }) || 0;
 

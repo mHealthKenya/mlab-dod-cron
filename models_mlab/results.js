@@ -122,7 +122,11 @@ const MlabResult = sequelize.sequelize.define(
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
-    }
+    },
+    lab7_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
   }, {
     sequelize,
     tableName: 'results',
